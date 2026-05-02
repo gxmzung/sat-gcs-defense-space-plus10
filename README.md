@@ -1,8 +1,8 @@
 # SAT-GCS Defense/Space Style Portfolio (+10 Operational Upgrade)
 
-Mini Satellite Ground Control System built as a **defense/space software engineering portfolio**.
+Mini Satellite Ground Control System designed to demonstrate a defense/space-style software architecture.
 
-This repository is not certified flight/mission software. It is a study project that imitates defense/aerospace development practices: requirements, traceability, interface control, verification planning, structured logging, configuration separation, validation, and operational runbooks.
+This project focuses on telemetry generation, binary protocol handling, gateway processing, mission server design, and operator visualization.
 
 
 ## +10 Operational Upgrade

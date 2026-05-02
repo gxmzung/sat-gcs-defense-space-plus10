@@ -1,0 +1,1 @@
+package dev.satgcs.mission.alert; public enum AlertSeverity { INFO, WARNING, CRITICAL }

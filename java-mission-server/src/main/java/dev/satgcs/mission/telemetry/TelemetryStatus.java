@@ -1,0 +1,1 @@
+package dev.satgcs.mission.telemetry; public enum TelemetryStatus { NORMAL, WARNING, CRITICAL }

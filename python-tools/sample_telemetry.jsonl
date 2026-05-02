@@ -1,0 +1,2 @@
+{"satelliteId":"KOMPSAT-SIM-01","sequence":9001,"timestampMs":1710000000000,"batteryVoltage":7.4,"temperature":32.1,"roll":0.1,"pitch":0.2,"yaw":91.0,"lat":36.35,"lon":127.38,"status":"NORMAL"}
+{"satelliteId":"KOMPSAT-SIM-01","sequence":9002,"timestampMs":1710000001000,"batteryVoltage":6.8,"temperature":64.1,"roll":0.1,"pitch":0.2,"yaw":91.0,"lat":36.35,"lon":127.38,"status":"CRITICAL"}

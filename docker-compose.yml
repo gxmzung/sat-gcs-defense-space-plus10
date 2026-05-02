@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-satgcs}
+      POSTGRES_USER: ${POSTGRES_USER:-satgcs}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-satgcs}
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-satgcs} -d ${POSTGRES_DB:-satgcs}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  mission-server:
+    build: ./java-mission-server
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-satgcs}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-satgcs}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-satgcs}
+      SATGCS_API_KEY: ${SATGCS_API_KEY:-dev-api-key}
+    ports: ["8080:8080"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8080}
+    ports: ["5173:80"]
+    depends_on:
+      mission-server:
+        condition: service_healthy
+
+volumes:
+  pgdata:

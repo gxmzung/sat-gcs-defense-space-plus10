@@ -1,0 +1,27 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: satgcs-mission-server
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/satgcs}
+    username: ${SPRING_DATASOURCE_USERNAME:satgcs}
+    password: ${SPRING_DATASOURCE_PASSWORD:satgcs}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+satgcs:
+  api-key: ${SATGCS_API_KEY:dev-api-key}
+  thresholds:
+    battery-warning-voltage: 7.1
+    battery-critical-voltage: 6.9
+    temperature-warning-c: 45.0
+    temperature-critical-c: 60.0

@@ -7,3 +7,17 @@ target/
 *.log
 .vscode/*
 !.vscode/settings.json
+
+# .NET
+bin/
+obj/
+
+# macOS
+.DS_Store
+
+# .NET
+bin/
+obj/
+
+# macOS
+.DS_Store

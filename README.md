@@ -216,3 +216,11 @@ This project does **not** claim:
 - Add dashboard screenshots and execution GIF
 - Add timing and latency measurement report
 - Add CI workflow for C++ / Java / React checks
+
+![Dashboard](assets/screenshots/dashboard1.png)
+![Dashboard](assets/screenshots/dashboard2.png)
+![Dashboard](assets/screenshots/dashboard3.png)
+
+![Telemetry Runtime](assets/screenshots/telemetry.png)
+
+![Mission Console Log](assets/screenshots/mission-log.png)

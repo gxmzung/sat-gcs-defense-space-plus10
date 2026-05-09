@@ -1,4 +1,20 @@
-# SAT-GCS Ground Control Portfolio
+## Screenshots
+
+### Operator Dashboard
+
+![Dashboard](assets/screenshots/dashboard1.png)
+
+![Dashboard Detail](assets/screenshots/dashboard2.png)
+
+![Mission Console](assets/screenshots/dashboard3.png)
+
+### Runtime Telemetry Flow
+
+![Telemetry Runtime](assets/screenshots/telemetry.png)
+
+### Mission Console Log
+
+![Mission Console Log](assets/screenshots/mission-log.png)# SAT-GCS Ground Control Portfolio
 
 Mini satellite ground control portfolio project focused on telemetry ingestion, gateway processing, mission server design, operator tooling, and verification documentation.
 

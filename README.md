@@ -1,22 +1,33 @@
-# SAT-GCS Defense/Space Style Portfolio (+10 Operational Upgrade)
+# SAT-GCS Ground Control Portfolio
 
-Mini Satellite Ground Control System designed to demonstrate a defense/space-style software architecture.
+Mini satellite ground control portfolio project focused on telemetry ingestion, gateway processing, mission server design, operator tooling, and verification documentation.
 
-This project focuses on telemetry generation, binary protocol handling, gateway processing, mission server design, and operator visualization.
+This project does not claim to be certified satellite or defense software.  
+It was built to demonstrate how a ground-control-style system can be structured across protocol handling, backend ingestion, operator visualization, and verification artifacts.
 
+---
 
-## +10 Operational Upgrade
+## Key Technologies
 
-This package includes additional production-style work:
+`C++` `UDP` `CRC32` `Spring Boot` `React` `C#` `Python`  
+`Telemetry` `Mission Server` `Operator Dashboard` `Verification`
+
+---
+
+## Production-Oriented Improvements
+
+This version includes operational and reliability-focused improvements:
 
 - C++ POSIX HTTP client instead of shelling out to `curl`
-- Gateway timeout / retry / bounded queue
-- Graceful shutdown with SIGINT/SIGTERM
+- Gateway timeout, retry logic, and bounded queue
+- Graceful shutdown with `SIGINT` / `SIGTERM`
 - Structured JSON logs with millisecond timestamps
 - Fault-injection UDP test tool
-- Expanded RTM/SRS/VTP traceability
+- Expanded RTM / SRS / VTP traceability
 - IDE and run command guide: `docs/IDE_AND_RUNBOOK.md`
 - Career level guide: `docs/CAREER_LEVEL_GUIDE.md`
+
+---
 
 ## Architecture
 
@@ -25,7 +36,7 @@ This package includes additional production-style work:
     UDP binary telemetry + CRC32
         ↓
 [C++ Telemetry Gateway]
-    size/magic/version/CRC validation
+    size / magic / version / CRC validation
     retry queue
     JSON forwarding
         ↓ HTTP + API Key
@@ -37,32 +48,63 @@ This package includes additional production-style work:
 [Python Replay / Load / Schema Tools]
 ```
 
-## Why this project exists
+---
 
-The goal is to connect hardware-production experience with ground-system software:
+## Why This Project Exists
 
-- PCB/Gerber/BOM/datasheet/material flow experience
-- device data generation
+The goal is to connect hardware-production experience with ground-system software.
+
+This project connects the following areas:
+
+- PCB / Gerber / BOM / datasheet / material-flow experience
+- device-side telemetry generation
 - binary protocol handling
 - telemetry ingestion
-- mission server and operator view
-- verification and traceability documents
+- gateway and mission server design
+- operator-facing monitoring
+- verification and traceability documentation
+
+---
+
+## Engineering-Oriented Features
+
+This project is more than a simple CRUD or dashboard application because it includes:
+
+- Binary UDP telemetry packet instead of plain JSON device data
+- CRC32 packet integrity check
+- Explicit decode error status in C++
+- Gateway timeout and retry behavior
+- Bounded retry queue
+- Mission server API key boundary
+- DTO validation and DB migration
+- Health check endpoint
+- Replay, load, and schema tools
+- Requirements traceability matrix
+- Interface Control Document
+- Verification Test Plan
+
+---
 
 ## Key Documents
 
 | Document | Purpose |
 |---|---|
 | `docs/SRS.md` | Software requirements |
-| `docs/ICD.md` | UDP/HTTP interface control |
+| `docs/ICD.md` | UDP / HTTP interface control |
 | `docs/SDD.md` | Software design description |
 | `docs/VTP.md` | Verification test plan |
 | `docs/VTR.md` | Verification report template |
 | `docs/RTM.md` | Requirements traceability matrix |
 | `docs/CODING_STANDARD.md` | Lightweight coding standard profile |
 | `docs/RISK_REGISTER.md` | Risk and mitigation table |
-| `docs/OPERATIONS_RUNBOOK.md` | Build/run/fault handling guide |
+| `docs/OPERATIONS_RUNBOOK.md` | Build, run, and fault-handling guide |
 | `docs/SECURITY_NOTES.md` | Security boundary and production extensions |
 | `docs/PORTFOLIO_GUIDE.md` | Interview explanation guide |
+| `docs/INTERVIEW_NOTES.md` | Interview talking points |
+| `docs/FAULT_INJECTION.md` | Fault-injection scenarios |
+| `docs/RUN_RESULT.md` | Run verification template |
+
+---
 
 ## Quick Start
 
@@ -83,6 +125,8 @@ Mission server health:
 curl http://localhost:8080/actuator/health
 ```
 
+---
+
 ## Build and Run C++ Layer
 
 ```bash
@@ -95,8 +139,12 @@ make cpp-test
   --server http://localhost:8080 \
   --api-key dev-api-key
 
-./build/cpp/satellite_device_sim --host 127.0.0.1 --port 46000
+./build/cpp/satellite_device_sim \
+  --host 127.0.0.1 \
+  --port 46000
 ```
+
+---
 
 ## Run Python Replay Tool
 
@@ -105,33 +153,66 @@ cd python-tools
 python -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
-python telemetry_replay.py --api http://localhost:8080 --api-key dev-api-key --file sample_telemetry.jsonl
+
+python telemetry_replay.py \
+  --api http://localhost:8080 \
+  --api-key dev-api-key \
+  --file sample_telemetry.jsonl
 ```
 
-## What makes this more practical than a toy app?
+---
 
-- Binary UDP telemetry packet instead of plain JSON device data
-- CRC32 packet integrity check
-- Explicit decode error status in C++
-- Bounded retry queue in gateway
-- Mission server API key boundary
-- DTO validation and DB migration
-- Health check endpoints
-- Replay/load/schema tools
-- Traceability matrix from requirements to code/tests
-- Interface Control Document and Verification Test Plan
+## Screenshots
+
+> Add real screenshots after local verification.  
+> Do not leave broken image links in the final portfolio version.
+
+Recommended files:
+
+```text
+assets/screenshots/dashboard.png
+assets/screenshots/telemetry.png
+assets/screenshots/operator-console.png
+```
+
+Once screenshots are added, enable the section below:
+
+```md
+![Dashboard](assets/screenshots/dashboard.png)
+
+![Telemetry Processing](assets/screenshots/telemetry.png)
+
+![Operator Console](assets/screenshots/operator-console.png)
+```
+
+---
 
 ## Honest Limits
 
 This project does **not** claim:
 
-- real CCSDS/ECSS full implementation
+- real CCSDS / ECSS full implementation
 - real satellite flight software
-- certified defense/aerospace compliance
+- certified defense or aerospace compliance
 - hardware-in-the-loop validation
 - formal timing analysis
 - production-grade mission security
 
-Interview wording:
+---
 
-> This is not certified mission software. I built it to study how defense/space-style systems are structured: requirements, ICD, C++ protocol layer, mission server, operator tools, and verification traceability.
+## Interview Wording
+
+> This is not certified mission software.  
+> I built it to study how ground-control-style systems are structured: requirements, ICD, C++ protocol layer, gateway processing, mission server, operator tools, and verification traceability.
+
+---
+
+## Future Improvements
+
+- Add real hardware telemetry source
+- Add stronger authentication and authorization
+- Add packet replay protection
+- Add integration test automation
+- Add dashboard screenshots and execution GIF
+- Add timing and latency measurement report
+- Add CI workflow for C++ / Java / React checks

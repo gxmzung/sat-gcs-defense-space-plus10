@@ -170,7 +170,7 @@ python telemetry_replay.py \
 
 ![Dashboard Detail](assets/screenshots/dashboard2.png)
 
-![Mission Console](assets/screenshots/dashboard3.png)
+![Operator Console](assets/screenshots/operator-console.png)
 
 ### Runtime Telemetry Flow
 

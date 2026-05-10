@@ -1,23 +1,15 @@
-.env
-.DS_Store
 node_modules/
-frontend/node_modules/
+.venv/
+venv/
 build/
 target/
+obj/
+__pycache__/
+.pytest_cache/
+.dart_tool/
+.idea/
+*.sqlite
+*.db
 *.log
-.vscode/*
-!.vscode/settings.json
-
-# .NET
-bin/
-obj/
-
-# macOS
-.DS_Store
-
-# .NET
-bin/
-obj/
-
-# macOS
+.env
 .DS_Store

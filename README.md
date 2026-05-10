@@ -1,21 +1,5 @@
 # SAT-GCS Defense Space Plus10
 
-## Screenshots
-
-### Operator Dashboard
-
-![Dashboard](assets/screenshots/dashboard1.png)
-
-![Dashboard Detail](assets/screenshots/dashboard2.png)
-
-### Runtime Telemetry Flow
-
-![Telemetry Runtime](assets/screenshots/telemetry.png)
-
-### Mission Console Log
-
-![Mission Console Log](assets/screenshots/mission-log.png)# SAT-GCS Ground Control Portfolio
-
 Mini satellite ground control portfolio project focused on telemetry ingestion, gateway processing, mission server design, operator tooling, and verification documentation.
 
 This project does not claim to be certified satellite or defense software.  
@@ -25,7 +9,7 @@ It was built to demonstrate how a ground-control-style system can be structured 
 
 ## Key Technologies
 
-`C++` `UDP` `CRC32` `Spring Boot` `React` `C#` `Python`  
+`C++` `UDP` `CRC32` `Spring Boot` `React` `Python`  
 `Telemetry` `Mission Server` `Operator Dashboard` `Verification`
 
 ---
@@ -59,7 +43,7 @@ This version includes operational and reliability-focused improvements:
 [Java Spring Boot Mission Server]
     validation / persistence / alerting / health check
         ↓
-[React Dashboard]      [C# Operator Console]
+[React Dashboard]      [Operator Logs / Tooling]
         ↑
 [Python Replay / Load / Schema Tools]
 ```
@@ -180,26 +164,21 @@ python telemetry_replay.py \
 
 ## Screenshots
 
-> Add real screenshots after local verification.  
-> Do not leave broken image links in the final portfolio version.
+### Operator Dashboard
 
-Recommended files:
+![Dashboard](assets/screenshots/dashboard1.png)
 
-```text
-assets/screenshots/dashboard.png
-assets/screenshots/telemetry.png
-assets/screenshots/operator-console.png
-```
+![Dashboard Detail](assets/screenshots/dashboard2.png)
 
-Once screenshots are added, enable the section below:
+![Mission Console](assets/screenshots/dashboard3.png)
 
-```md
-![Dashboard](assets/screenshots/dashboard.png)
+### Runtime Telemetry Flow
 
-![Telemetry Processing](assets/screenshots/telemetry.png)
+![Telemetry Runtime](assets/screenshots/telemetry.png)
 
-![Operator Console](assets/screenshots/mission-log.png)
-```
+### Mission Console Log
+
+![Mission Console Log](assets/screenshots/mission-log.png)
 
 ---
 

@@ -8,8 +8,6 @@
 
 ![Dashboard Detail](assets/screenshots/dashboard2.png)
 
-![Mission Console](assets/screenshots/dashboard3.png)
-
 ### Runtime Telemetry Flow
 
 ![Telemetry Runtime](assets/screenshots/telemetry.png)

@@ -200,7 +200,7 @@ Once screenshots are added, enable the section below:
 
 ![Telemetry Processing](assets/screenshots/telemetry.png)
 
-![Operator Console](assets/screenshots/operator-console.png)
+![Operator Console](assets/screenshots/mission-log.png)
 ```
 
 ---

@@ -1,33 +1,34 @@
-# SAT-GCS Documentation
+# SAT-GCS Documentation Index
 
-This directory contains documentation for the satellite ground-control and telemetry demo.
+## Requirements
+- [SRS](requirements/SRS.md)
 
-## Documents
+## Architecture
+- [SDD](architecture/SDD.md)
+- [ICD](architecture/ICD.md)
+- [Protocol](architecture/PROTOCOL.md)
+- [Coding Standard](architecture/CODING_STANDARD.md)
+- [Plus10 Upgrade](architecture/PLUS10_UPGRADE.md)
 
-- SRS: Software Requirements Specification
-- SDD: Software Design Description
-- ICD: Interface Control Document
-- PROTOCOL: Telemetry and packet protocol
-- VTP: Verification Test Plan
-- VTR: Verification Test Report
-- RTM: Requirements Traceability Matrix
-- OPERATIONS_RUNBOOK: Operator and runtime notes
-- SECURITY_NOTES: Security considerations
-- RISK_REGISTER: Project and technical risks
-- CODING_STANDARD: Coding and style rules
-- FAULT_INJECTION: Fault-injection testing notes
-- VISUALIZATION_NOTES: Operator dashboard notes
-- RUN_RESULT: Execution result summary
+## Verification
+- [RTM](verification/RTM.md)
+- [VTP](verification/VTP.md)
+- [VTR](verification/VTR.md)
+- [Run Result](verification/RUN_RESULT.md)
+- [Fault Injection](verification/FAULT_INJECTION.md)
 
-## Purpose
+## Security
+- [Security Notes](security/SECURITY_NOTES.md)
+- [SOC Security Notes](security/SOC_SECURITY_NOTES.md)
+- [Risk Register](security/RISK_REGISTER.md)
 
-This project demonstrates a multi-stack satellite ground-control workflow:
+## Operations
+- [Operations Runbook](operations/OPERATIONS_RUNBOOK.md)
+- [IDE and Runbook](operations/IDE_AND_RUNBOOK.md)
+- [Visualization Notes](operations/VISUALIZATION_NOTES.md)
 
-C++ packet handling  
-→ Java mission server  
-→ Python telemetry replay and testing  
-→ React operator dashboard
-
-## Current Stage
-
-Prototype / portfolio system demo.
+## Career / Portfolio
+- [Career Level Guide](career/CAREER_LEVEL_GUIDE.md)
+- [Interview Notes](career/INTERVIEW_NOTES.md)
+- [Interview Script](career/INTERVIEW_SCRIPT.md)
+- [Portfolio Guide](career/PORTFOLIO_GUIDE.md)
